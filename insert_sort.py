@@ -1,4 +1,4 @@
-numbers = input().split()
+numbers = [int(x) for x in input().split()]
 
 length = len(numbers)
 
@@ -9,7 +9,7 @@ for i in range(length):
         sorted_numbers.append(numbers[i])
         continue
     for j in range(len(sorted_numbers)):
-        if int(numbers[i]) < int(sorted_numbers[j]):
+        if numbers[i] < sorted_numbers[j]:
             sorted_numbers.insert(j, numbers[i])
             break
         if j == len(sorted_numbers) - 1:
