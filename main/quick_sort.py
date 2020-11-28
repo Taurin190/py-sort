@@ -43,8 +43,13 @@ def quick_sort(num_list, start, end):
     return sorted_num_list
 
 
-numbers = [int(x) for x in input().split()]
-length = len(numbers)
-print(quick_sort(numbers, 0, length - 1))
+def quick_sort_main(num_list):
+    length = len(num_list)
+    return quick_sort(num_list, 0, length - 1)
+
+
+if __name__ == '__main__':
+    numbers = [int(x) for x in input().split()]
+    print(quick_sort_main(numbers))
 
 
