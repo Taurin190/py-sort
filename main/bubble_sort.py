@@ -1,11 +1,14 @@
-numbers = [int(x) for x in input().split()]
+def bubble_sort(number_list):
+    length = len(number_list)
+    for i in range(length - 1):
+        for j in range(length - 1):
+            if number_list[j] > number_list[j + 1]:
+                tmp_number = number_list[j + 1]
+                number_list[j + 1] = number_list[j]
+                number_list[j] = tmp_number
+    return number_list
 
-length = len(numbers)
 
-for i in range(length - 1):
-    for j in range(length - 1):
-        if numbers[j] > numbers[j + 1]:
-            tmp_number = numbers[j + 1]
-            numbers[j + 1] = numbers[j]
-            numbers[j] = tmp_number
-print(numbers)
+if __name__ == '__main__':
+    numbers = [int(x) for x in input().split()]
+    print(bubble_sort(numbers))
