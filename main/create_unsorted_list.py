@@ -1,8 +1,8 @@
 import random
 
 
-def get_unsorted_list(max, length):
-    original_list = list(range(max))
+def get_unsorted_list(maximum, length):
+    original_list = list(range(maximum))
     unsorted_list = []
     while len(unsorted_list) < length:
         index = random.randint(0, len(original_list) - 1)
