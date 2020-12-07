@@ -1,4 +1,6 @@
-debug_flag = True
+import sys
+
+debug_flag = False
 
 
 def d_print(message):
@@ -45,6 +47,7 @@ def quick_sort(num_list, start, end):
 
 def quick_sort_main(num_list):
     length = len(num_list)
+    sys.setrecursionlimit(5000)
     return quick_sort(num_list, 0, length - 1)
 
 
